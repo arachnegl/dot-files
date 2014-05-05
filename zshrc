@@ -46,12 +46,30 @@ plugins=(git history-substring-search history)
 source $ZSH/oh-my-zsh.sh
 
 export TERM='xterm-256color'
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin
+
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# For Brew
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+# Standard ML of New Jersey
+export PATH="$PATH:/usr/local/smlnj/bin"
+# Ruby rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+# Haskell
+export PATH=~/.cabal/bin:$PATH
+
+# Postgres app (Brew Installed)
+# Not used postgres.app preferred
+#export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 
 ### PYTHON
+# virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
-# not necessary for py3 which stores pyc in separate folder
-export PYTHONDONTWRITEBYTECODE='True'
+export PYTHONDONTWRITEBYTECODE='True' # not necessary for py3
 export VIRTUALENV_DISTRIBUTE='True'
 #alias mkvirtualenv='mkvirtualenv --distribute'
 export PYTHONSTARTUP=~/.pythonrc
@@ -62,11 +80,11 @@ alias ipy='ipython --pdb'
 alias p="python"
 alias p3="python3"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 ### Editors
 alias e="emacs"
 alias v="vim"
 
+alias -s html=w3m
+
+export DOCKER_HOST=tcp://127.0.0.1:4243
 alias m="memcached -d -m 24 -p 11211"
