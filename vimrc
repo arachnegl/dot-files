@@ -15,7 +15,7 @@ Bundle 'vim-scripts/mru.vim'
 " depends on exuberant ctags:
 " brew install ctags-exuberant
 Bundle 'majutsushi/tagbar'
-
+Bundle 'ivanov/vim-ipython'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-powerline'
@@ -164,3 +164,11 @@ nnoremap td  :tabclose<CR>
 "nnoremap th :tabnext<CR>
 "nnoremap tl :tabprev<CR>
 "nnoremap tn :tabnew<CR>
+"
+
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
+let g:ycm_confirm_extra_conf = 0
+" various goto subcmds add entries to vims' jumplist so you 
+" can use Ctrl-O to jmp back
+nnoremap gg :YcmCompleter GoTo<CR>
