@@ -5,7 +5,7 @@
 
 \set QUIET ON
 
-\set PROMPT1 '%[%033[1;32;40m%]%M:%&gt; %n@%/%[%033[0m%]% # '
+\set PROMPT1 '%[%033[1;33;40m%]%n@%/%R%[%033[0m%]%# '
 \set PAGER OFF
 \set HISTFILE ~/.psql_history- :HOST - : DBNAME -- Remove space between : and DBNAME
 \set HISTSIZE 2000
