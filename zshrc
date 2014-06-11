@@ -51,6 +51,8 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+### For Google App Engine
+export PATH="/Users/greg/google-cloud-sdk/bin:$PATH"
 
 # For Brew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
