@@ -32,6 +32,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'moll/vim-node'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'groenewege/vim-less'
+Bundle 'mattn/emmet-vim'
 filetype plugin indent on
 
 " on .vimrc file save auto source
