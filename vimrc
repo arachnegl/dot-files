@@ -1,11 +1,12 @@
 set nocompatible  " be iMproved
 filetype off      " required
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'klen/python-mode'
@@ -32,6 +33,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'moll/vim-node'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'groenewege/vim-less'
+Bundle 'mattn/emmet-vim'
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'einars/js-beautify'
 filetype plugin indent on
 
 " on .vimrc file save auto source

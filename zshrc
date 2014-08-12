@@ -49,6 +49,9 @@ export TERM='xterm-256color'
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin
 
+
+export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 ### For Google App Engine
