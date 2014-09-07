@@ -47,10 +47,10 @@ set pastetoggle=<F2>
 set clipboard=unnamed
 
 " simpler window navigation
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+map <C-j> <c-w>j
+map <C-k> <c-w>k
+map <C-l> <c-w>l
+map <C-h> <c-w>h
 
 " simpler tab navigation
 map <C-t><up> :tabr<cr>
@@ -64,12 +64,12 @@ vnoremap > >gv
 
 " Make search case insensitive
 set hlsearch
-nnoremap <silent> <C-l> :nohl<CR><C-1>
+"nnoremap <silent> <C-l> :nohl<CR><C-1>
 set incsearch
 set ignorecase
 set smartcase
 
-" Disable stupid backup and swap files
+" Disable backup and swap files
 set nobackup
 set nowritebackup
 set noswapfile

@@ -55,7 +55,7 @@ export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 ### For Google App Engine
-export PATH="/Users/greg/google-cloud-sdk/bin:$PATH"
+# export PATH="/Users/greg/google-cloud-sdk/bin:$PATH"
 
 # For Brew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
