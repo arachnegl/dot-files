@@ -21,6 +21,3 @@
 
 [push]
     default = simple
-    
-[branch "master"]
-        mergeoptions = --no-commit --no-ff
