@@ -46,6 +46,9 @@ Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 Plugin 'moll/vim-node'
 Plugin 'wookiehangover/jshint.vim'
+Plugin 'burnettk/vim-angular'
+"Plugin 'ciaco/jasmine.vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
 
 " HTML & CSS
 Plugin 'mattn/emmet-vim'
