@@ -4,39 +4,53 @@ filetype off      " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-fireplace'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'klen/python-mode'
-Bundle 'vim-scripts/pep8'
-Bundle 'vim-scripts/mru.vim'
-" Tagbar 
-" depends on exuberant ctags:
-" brew install ctags-exuberant
-Bundle 'majutsushi/tagbar'
-Bundle 'ivanov/vim-ipython'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'wincent/Command-T'
-"Bundle 'FuzzyFinder'
-Bundle 'kien/ctrlp.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'L9'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'Zenburn'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'moll/vim-node'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'groenewege/vim-less'
-Bundle 'mattn/emmet-vim'
-Bundle 'maksimr/vim-jsbeautify'
-Bundle 'einars/js-beautify'
+" General Vim
+Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/mru.vim'
+" Tagbar depends on exuberant ctags: brew install ctags-exuberant
+Plugin 'majutsushi/tagbar'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'L9'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'Lokaltog/vim-easymotion'
+"Plugin 'wincent/Command-T'
+"Plugin 'FuzzyFinder'
+Plugin 'kien/ctrlp.vim'
+Plugin 'msanders/snipmate.vim'
+Plugin 'mileszs/ack.vim'
+
+" Ruby & Rails
+Plugin 'tpope/vim-rails'
+
+" Clojure
+Plugin 'tpope/vim-fireplace'
+
+" Python
+Plugin 'ivanov/vim-ipython'
+Plugin 'vim-scripts/pep8'
+Plugin 'klen/python-mode'
+
+" Themes
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'Zenburn'
+Plugin 'altercation/vim-colors-solarized'
+
+" Node & Javascript
+" Following advice on https://github.com/joyent/wiki/Vim-Plugins
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
+Plugin 'moll/vim-node'
+Plugin 'wookiehangover/jshint.vim'
+
+" HTML & CSS
+Plugin 'mattn/emmet-vim'
+Plugin 'groenewege/vim-less'
+
 filetype plugin indent on
 
 " on .vimrc file save auto source
