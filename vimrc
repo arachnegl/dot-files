@@ -29,10 +29,14 @@ Plugin 'tpope/vim-rails'
 " Clojure
 Plugin 'tpope/vim-fireplace'
 
+" Go
+Plugin 'fatih/vim-go'
+
 " Python
 Plugin 'ivanov/vim-ipython'
 Plugin 'vim-scripts/pep8'
 Plugin 'klen/python-mode'
+Plugin 'vim-virtualenv'
 
 " Themes
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -42,6 +46,7 @@ Plugin 'altercation/vim-colors-solarized'
 " Node & Javascript
 " Following advice on https://github.com/joyent/wiki/Vim-Plugins
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'digitaltoad/vim-jade'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 Plugin 'moll/vim-node'
@@ -53,6 +58,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 " HTML & CSS
 Plugin 'mattn/emmet-vim'
 Plugin 'groenewege/vim-less'
+au BufNewFile,BufRead *.handlebars set filetype=html
 
 filetype plugin indent on
 
