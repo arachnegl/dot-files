@@ -116,9 +116,18 @@ augroup vimrc_autocmds
     autocmd Filetype python match Excess /\%80v.*/
     autocmd Filetype python set nowrap
 augroup END
+" python-mode
+let g:pymode_lint = 1
+let g:pymode_syntax = 1
+let g:pymode_rope = 0   " disable for Jedi-vim
+" folding w/ py bias
+set foldmethod=indent
+set foldlevel=99
+set foldnestmax=1
 
+
+" Plugin Shortcuts
 map <F2> :NERDTreeToggle<CR>
-" Tagbar window
 nmap <F8> :TagbarToggle<CR>
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -147,15 +156,11 @@ set laststatus=2  " ensures status bar shows
 set relativenumber
 set number                  " absolute nmbr on current line
 " set undofile  " don't want persistant undos
-set wrap
+set nowrap
 set textwidth=79
 set formatoptions=qrn1
 " set colorcolumn=85   not needed as something discolors from col 80
 
-" folding w/ py bias
-set foldmethod=indent
-set foldlevel=99
-set foldnestmax=1
 
 nnoremap ; :
 au FocusLost * :wa
@@ -173,11 +178,6 @@ inoremap jj <ESC>  " insert mode
 
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
-
-" python-mode
-let g:pymode_lint = 1
-let g:pymode_syntax = 1
-let g:pymode_rope = 0   " disable for Jedi-vim
 
 " Tab navigation
 nnoremap th  :tabfirst<CR>
