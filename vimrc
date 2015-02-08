@@ -116,6 +116,10 @@ augroup vimrc_autocmds
     autocmd Filetype python match Excess /\%80v.*/
     autocmd Filetype python set nowrap
 augroup END
+" Don't warn on:
+" http://pylint-messages.wikidot.com/all-codes
+"   C0111  Missing %s docstring
+let g:syntastic_python_flake8_args='--ignore=C0111'
 " python-mode
 let g:pymode_lint = 1
 let g:pymode_syntax = 1

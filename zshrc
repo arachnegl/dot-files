@@ -56,6 +56,9 @@ export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
 export PATH="/usr/local/heroku/bin:$PATH"
 ### For Google App Engine
 # export PATH="/Users/greg/google-cloud-sdk/bin:$PATH"
+export PATH="/Users/greg/go_appengine:$PATH"
+export GOPATH=~/go-packages
+
 
 # For Brew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
@@ -93,3 +96,12 @@ alias -s html=w3m
 
 export DOCKER_HOST=tcp://127.0.0.1:4243
 alias m="memcached -d -m 24 -p 11211"
+
+alias gfe="cd ~/WORK/gfe && workon gfe"
+alias gae="cd ~/WORK/gae && workon gae"
+alias cmp="cd ~/WORK/campus && workon cmp"
+alias bytes="cd ~/WORK/bytes && workon bytes"
+alias skym="cd ~/WORK/skypeformedia && workon skym"
+
+export NVM_DIR="/Users/greg/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
