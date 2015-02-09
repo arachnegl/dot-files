@@ -119,9 +119,9 @@ augroup END
 " Don't warn on:
 " http://pylint-messages.wikidot.com/all-codes
 "   C0111  Missing %s docstring
-let g:syntastic_python_flake8_args='--ignore=C0111'
+let g:syntastic_python_flake8_args='--ignore=C0111,W0232'
 " python-mode
-let g:pymode_lint = 1
+let g:pymode_lint = 0
 let g:pymode_syntax = 1
 let g:pymode_rope = 0   " disable for Jedi-vim
 " folding w/ py bias

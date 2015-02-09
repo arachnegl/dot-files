@@ -59,6 +59,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/Users/greg/go_appengine:$PATH"
 export GOPATH=~/go-packages
 
+export APP_ENGINE_SDK="/Users/gloyse/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/"
 
 # For Brew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
@@ -81,6 +82,15 @@ export PYTHONDONTWRITEBYTECODE='True' # not necessary for py3
 export VIRTUALENV_DISTRIBUTE='True'
 #alias mkvirtualenv='mkvirtualenv --distribute'
 export PYTHONSTARTUP=~/.pythonrc
+alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "egg"'
+
+### ZSH env vars
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+export SAVEHIST=10000
+# export SAVEHIST=~/.histfile
+export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear:clr:[bf]g"
+
 
 alias pygrep='grep --include="*.py"'
 alias pyfind='find . -name "*.py"'
@@ -90,6 +100,7 @@ alias p3="python3"
 
 ### Editors
 alias e="emacs"
+alias ec="emacsclient -t"
 alias v="vim"
 
 alias -s html=w3m
@@ -97,11 +108,9 @@ alias -s html=w3m
 export DOCKER_HOST=tcp://127.0.0.1:4243
 alias m="memcached -d -m 24 -p 11211"
 
-alias gfe="cd ~/WORK/gfe && workon gfe"
-alias gae="cd ~/WORK/gae && workon gae"
-alias cmp="cd ~/WORK/campus && workon cmp"
 alias bytes="cd ~/WORK/bytes && workon bytes"
-alias skym="cd ~/WORK/skypeformedia && workon skym"
-
-export NVM_DIR="/Users/greg/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+alias fiber2="cd ~/WORK/fiber2 && workon fiber2"
+alias gabo="cd ~/WORK/gabo-events && workon gabo-evs"
+alias cmp="cd ~/WORK/cmp && workon cmp"
+alias pot_evs="cd ~/WORK/potato-events && workon potato-events"
+alias evs="cd ~/WORK/events && source virtualenvs/GEVENTS/bin/activate"
