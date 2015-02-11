@@ -34,7 +34,6 @@ Plugin 'fatih/vim-go'
 
 " Python
 Plugin 'ivanov/vim-ipython'
-Plugin 'vim-scripts/pep8'
 Plugin 'klen/python-mode'
 Plugin 'vim-virtualenv'
 
@@ -120,6 +119,7 @@ augroup END
 " http://pylint-messages.wikidot.com/all-codes
 "   C0111  Missing %s docstring
 let g:syntastic_python_flake8_args='--ignore=C0111,W0232'
+let g:pymode_lint_ignore = "C0111,W0232"
 " python-mode
 let g:pymode_lint = 0
 let g:pymode_syntax = 1
