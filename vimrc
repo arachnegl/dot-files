@@ -57,6 +57,9 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 " HTML & CSS
 Plugin 'mattn/emmet-vim'
 Plugin 'groenewege/vim-less'
+
+" Random
+Plugin 'ryanss/vim-hackernews'
 au BufNewFile,BufRead *.handlebars set filetype=html
 
 filetype plugin indent on
