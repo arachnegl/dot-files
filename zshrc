@@ -90,6 +90,8 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 # export SAVEHIST=~/.histfile
 export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear:clr:[bf]g"
+setopt inc_append_history
+setopt share_history
 
 
 alias pygrep='grep --include="*.py"'
