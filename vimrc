@@ -1,65 +1,63 @@
 set nocompatible  " be iMproved
 filetype off      " required
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
 " General Vim
-Plugin 'gmarik/vundle'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-scripts/mru.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'vim-scripts/mru.vim'
 " Tagbar depends on exuberant ctags: brew install ctags-exuberant
-Plugin 'majutsushi/tagbar'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/syntastic'
-Plugin 'L9'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'Lokaltog/vim-easymotion'
-"Plugin 'wincent/Command-T'
-"Plugin 'FuzzyFinder'
-Plugin 'kien/ctrlp.vim'
-Plugin 'msanders/snipmate.vim'
-Plugin 'mileszs/ack.vim'
+Plug 'majutsushi/tagbar'
+" Plug 'Valloric/YouCompleteMe'
 
-" Ruby & Rails
-Plugin 'tpope/vim-rails'
+""" Syntax checkers 
+" Plug 'scrooloose/syntastic'
+" let g:syntastic_python_flake8_args='--ignore=C0111,W0232'
+" Plug 'neomake/neomake'
+Plug 'w0rp/ale'
 
-" Clojure
-Plugin 'tpope/vim-fireplace'
+" Don't warn on:
+" http://pylint-messages.wikidot.com/all-codes
+"   C0111  Missing %s docstring
+Plug 'Lokaltog/vim-powerline'
+Plug 'Lokaltog/vim-easymotion'
+"Plug 'wincent/Command-T'
+"Plug 'FuzzyFinder'
+Plug 'kien/ctrlp.vim'
+Plug 'msanders/snipmate.vim'
 
 " Go
-Plugin 'fatih/vim-go'
+Plug 'fatih/vim-go'
 
 " Python
-Plugin 'ivanov/vim-ipython'
-Plugin 'klen/python-mode'
-Plugin 'vim-virtualenv'
+Plug 'klen/python-mode'
+let g:pymode_python = 'python3'
+let g:pymode_lint = 0
+let g:pymode_syntax = 1
+let g:pymode_rope = 0   " disable for Jedi-vim
+let g:pymode_lint_ignore = "C0111,W0232"
+
+" Plug 'vim-virtualenv'
 
 " Themes
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'Zenburn'
-Plugin 'altercation/vim-colors-solarized'
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'altercation/vim-colors-solarized'
 
 " Node & Javascript
-" Following advice on https://github.com/joyent/wiki/Vim-Plugins
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'einars/js-beautify'
-Plugin 'moll/vim-node'
-Plugin 'wookiehangover/jshint.vim'
-Plugin 'burnettk/vim-angular'
-"Plugin 'ciaco/jasmine.vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
+Plug 'w0rp/ale'
 
 " HTML & CSS
-Plugin 'mattn/emmet-vim'
-Plugin 'groenewege/vim-less'
+Plug 'mattn/emmet-vim'
+Plug 'groenewege/vim-less'
 
-" Random
-Plugin 'ryanss/vim-hackernews'
+" Initialize plugin system
+call plug#end()
+
 au BufNewFile,BufRead *.handlebars set filetype=html
 
 filetype plugin indent on
@@ -118,15 +116,7 @@ augroup vimrc_autocmds
     autocmd Filetype python match Excess /\%80v.*/
     autocmd Filetype python set nowrap
 augroup END
-" Don't warn on:
-" http://pylint-messages.wikidot.com/all-codes
-"   C0111  Missing %s docstring
-let g:syntastic_python_flake8_args='--ignore=C0111,W0232'
-let g:pymode_lint_ignore = "C0111,W0232"
-" python-mode
-let g:pymode_lint = 0
-let g:pymode_syntax = 1
-let g:pymode_rope = 0   " disable for Jedi-vim
+
 " folding w/ py bias
 set foldmethod=indent
 set foldlevel=99
