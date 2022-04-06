@@ -151,6 +151,7 @@ alias lz='lazydocker'
 alias lg='lazygit'
 alias dc='docker-compose'
 alias vpn='protonvpn-cli'
+alias cm='chezmoi'
 # alias end
 
 
